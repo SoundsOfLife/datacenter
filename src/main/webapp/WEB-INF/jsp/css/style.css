@@ -1,0 +1,265 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    font-family:"微软雅黑";
+    font-size:14px;
+}
+#l-map {
+    // width:100%;
+    height:500px;
+    overflow: hidden;
+}
+#result{
+    position: absolute;
+    top: 470px;
+    right: 0;
+    width: 240px;
+    // background: rgba(255,255,255,0.8);
+}
+
+button {
+    border: 1px solid #999;
+    font-size: 16px;
+    font-family: '华文细黑';
+    height: 30px;
+    width: 90px;
+    white-space: nowrap;
+    background-color: #fff;
+    color: #000;
+}
+
+button:hover {
+    // color: #fff;
+    background-color: #eee;
+    opacity: 0.9;
+}
+
+#open {
+    float: left;
+}
+
+#close {
+    float: right;
+}
+
+li{
+    line-height:28px;
+}
+.cityList{
+    height: 320px;
+    width:372px;
+    overflow-y:auto;
+}
+.sel_container{
+    z-index:9999;
+    font-size:12px;
+    position:absolute;
+    right:0px;
+    top:0px;
+    width:230px;
+    background:rgba(255,255,255,0.8);
+    height:30px;
+    line-height:30px;
+    padding:5px;
+    border-radius: 5px 0 0 5px;
+}
+.map_popup {
+    position: absolute;
+    z-index: 200000;
+    width: 382px;
+    height: 344px;
+    right:0px;
+    top:40px;
+}
+.map_popup .popup_main {
+    background:#fff;
+    border: 1px solid #8BA4D8;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.map_popup .title {
+    background: url("http://map.baidu.com/img/popup_title.gif") repeat scroll 0 0 transparent;
+    color: #6688CC;
+    font-weight: bold;
+    height: 24px;
+    line-height: 25px;
+    padding-left: 7px;
+}
+.map_popup button {
+    background: url("http://map.baidu.com/img/popup_close.gif") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 12px;
+    position: absolute;
+    right: 4px;
+    top: 6px;
+    width: 12px;
+}
+
+.event-list {
+    // float: right;
+    background: #787878;
+    // background: -webkit-gradient(linear, left top, right bottom, from(#5BCBFB), to(#0487D1));
+    // background: -moz-linear-gradient(left top, #5BCBFB, #0487D1);
+    // background: -o-linear-gradient(left top, #5BCBFB, #0487D1);
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 240px;
+    height: 500px;
+    overflow: auto;
+}
+
+.event-list ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.event-list ul li {
+    // padding-left: 1em;
+    margin: 0 1em 0 1em;
+    // border-bottom: 1px solid #9FD1EC;
+    border-bottom: 1px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    // width: 200px;
+    text-overflow: ellipsis;
+    // padding: .5em 0 .5em 0;
+}
+
+.event-list ul li:last-of-type {
+    border-bottom: none;
+} 
+
+
+.event-list ul li a {
+    text-decoration: none;
+    color: #fff; /*address字体颜色*/
+}
+
+.event-list ul li a .address {
+    display: block;
+    font-size: 15px;
+    margin: 10px 0 0 0;
+}
+
+.event-list ul li a .time {
+    display: block;
+    font-size: 12px;
+    margin: 0 0 10px 0;
+    text-align: right;
+    color: #333;
+}
+
+dl {
+    clear: both;
+}
+
+dl dt {
+    float: left;
+    padding-bottom: 1em;
+    width: 66px;
+}
+
+dl dd {
+    overflow: hidden;
+    padding-bottom: 1em;
+}
+
+/* .event-content {
+    height: 310px;
+    padding: 20px 100px;
+}
+
+.event-present {
+    height: 350px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.event-all {
+    // height: 700px;
+    overflow: hidden;
+} */
+    .event-present {
+        height: 60px;
+        background-color: #212121;
+        overflow: hidden;
+        position: relative;
+        color: #f66c6f;
+        /*text-shadow: 0 0.5px #fff;*/
+        border-top: 1px solid #fff;
+        font-weight: 600;
+    }
+    
+    .event-content {
+        height: 60px;
+        padding: 0 100px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        -webkit-transition: top ease-in-out 0.5s;
+        -moz-transition: top ease-in-out 0.5s;
+        -ms-transition: top ease-in-out 0.5s;
+        -o-transition: top ease-in-out 0.5s;
+        transition: top ease-in-out 0.5s;
+        box-sizing: border-box;
+    }
+    
+    .event-content.in {
+        top: 0;
+    }
+    
+    .event-content.out {
+        top: -60px;
+    }
+    .event-all {
+        overflow: hidden;
+        height: 60px;
+    }
+
+.select-time {
+    width: 240px;
+    height: 20px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+}
+
+#option {
+    width: 160px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+}
+
+#ok {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    background: #97FFFF;//这里改颜色
+}
+#legend {
+    position: absolute;
+    left: 2px;
+    /*top: 454px;*/
+    width: 95px;
+    height: 200px;
+}
+
+/* 隐藏百度地图图标*/
+.BMap_cpyCtrl
+{
+    display:none;
+}
+.anchorBL{
+    display:none;
+}

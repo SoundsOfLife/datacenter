@@ -8,17 +8,17 @@
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd  
             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd              
             http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
-    
+    <mvc:default-servlet-handler/>
     <!-- 激活@Controller模式 -->
     <mvc:annotation-driven />
     <!-- 对包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 需要更改 -->
-    <context:component-scan base-package="cc.monggo.web.controller" />
+    <context:component-scan base-package="com.controller" />
 
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
-            <value>/WEB-INF/jsp/</value>
+            <value>/WEB-INF/jsp/pages/</value>
         </property>
         <property name="suffix">
             <value>.jsp</value>

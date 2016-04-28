@@ -9,11 +9,11 @@ map.centerAndZoom(point, 15);                 // 初始化地图，设置中心�
 map.enableScrollWheelZoom();
 map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
 
-var myIcon1 = new BMap.Icon("accident1.png", new BMap.Size(32,32));
-var myIcon2 = new BMap.Icon("accident2.png", new BMap.Size(32,32));
-var myIcon3 = new BMap.Icon("accident3.png", new BMap.Size(32,32));
-var myIcon4 = new BMap.Icon("accident4.png", new BMap.Size(32,32));
-var myIcon5 = new BMap.Icon("accident5.png", new BMap.Size(32,32));
+var myIcon1 = new BMap.Icon("./img/accident1.png", new BMap.Size(32,32));
+var myIcon2 = new BMap.Icon("./img/accident2.png", new BMap.Size(32,32));
+var myIcon3 = new BMap.Icon("./img/accident3.png", new BMap.Size(32,32));
+var myIcon4 = new BMap.Icon("./img/accident4.png", new BMap.Size(32,32));
+var myIcon5 = new BMap.Icon("./img/accident5.png", new BMap.Size(32,32));
 
 // 创建CityList对象，并放在citylist_container节点内
 var myCl = new BMapLib.CityList({container : "citylist_container", map : map});
