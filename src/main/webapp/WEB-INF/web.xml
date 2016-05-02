@@ -15,7 +15,6 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     </servlet>
     
-    
     <servlet-mapping>
         <servlet-name>datacenter</servlet-name>
         <url-pattern>/</url-pattern>
